@@ -1,0 +1,93 @@
+{% load render_bundle from webpack_loader %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>8on8</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+        <link rel="icon" href="/media/ico/favicon.png">
+        <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-60466881-2"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-60466881-2');
+        </script>
+        <script src="https://use.typekit.net/mli8mqj.js"></script>
+        <script>try{Typekit.load({ async: true });}catch(e){}</script>
+        <style>
+            @font-face {
+                font-family: 'Helvetica Neue';
+                src: url('/media/font/HelveticaNeue.eot');
+                src: url('/media/font/HelveticaNeue.eot?#iefix') format('embedded-opentype'),
+                    url('/media/font/HelveticaNeue.woff') format('woff'),
+                    url('/media/font/HelveticaNeue.ttf') format('truetype'),
+                    url('/media/font/HelveticaNeue.svg#Helvetica Neue') format('svg');
+                font-size: 16pt;
+            }
+            @font-face {
+                font-family:'Helvetica Neue Bold';
+                src: url('/media/font/Helvetica Neue Bold.eot');
+                src: url('/media/font/Helvetica Neue Bold.eot?#iefix') format('embedded-opentype'),
+                    url('/media/font/Helvetica Neue Bold.woff') format('woff'),
+                    url('/media/font/Helvetica Neue Bold.ttf') format('truetype'),
+                    url('/media/font/Helvetica Neue Bold.svg#Helvetica Neue Bold') format('svg');
+                font-weight: 700;
+                font-style: normal;
+                font-stretch: normal;
+                unicode-range: U+0-10FFFF;
+            }
+            #menu {
+                width:25%;
+                position: fixed;
+            }
+            .content {
+                margin: auto;
+            }
+            #image-view {
+                margin-left: 0;
+                margin-right: 0;
+            }
+            body {
+                font-family: 'Helvetica Neue', 'source-han-sans-simplified-c', SimHei, serif;
+                color: #262626;
+                margin: 0;
+                display: inline;
+            }
+            @media screen and (max-width: 768px) {
+                #menu {
+                    display: none;
+                }
+                #contents {
+                    margin-left: 0;
+                    margin-right: 0;
+                }
+                body {
+                    width: 100vh;
+                    -webkit-text-size-adjust: none;
+                    font-size: 100%;
+                }
+            }
+            @media screen and (max-device-width: 768px) {
+                body {
+                    -webkit-text-size-adjust: none;
+                    font-size: 100%;
+                }
+            }
+            #image-view {
+                background-color: black;
+            }
+            ::-webkit-scrollbar {
+                width: 0;  /* remove scrollbar space */
+                height: 0;
+                background: transparent;  /* optional: just make scrollbar invisible */
+            }
+        </style>
+    </head>
+    <body>
+    <div id="page"></div>
+    {% render_bundle 'main' %}
+    </body>
+</html>

@@ -1,0 +1,7 @@
+Django
+django-webpack-loader
+djangorestframework
+django-photologue==3.7
+django-ckeditor==5.3.0
+wheel
+django-qiniu-storage
